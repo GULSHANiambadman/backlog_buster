@@ -1,0 +1,110 @@
+.library-page {
+    min-height: calc(100vh - 80px);
+    padding: 3rem 0;
+}
+
+.library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.library-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.library-header p {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+}
+
+.sync-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.library-controls {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-box .input {
+    width: 100%;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--bg-secondary);
+    padding: 0.25rem;
+    border-radius: var(--radius-md);
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+    color: var(--primary-500);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    color: white;
+}
+
+.sort-select {
+    min-width: 200px;
+}
+
+.games-grid {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .library-header {
+        flex-direction: column;
+    }
+
+    .sync-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sync-buttons .btn {
+        width: 100%;
+    }
+
+    .library-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sort-select {
+        width: 100%;
+    }
+}
